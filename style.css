@@ -1,0 +1,138 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    padding-left: 10vw;
+    background: url(background.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+#signupForm{
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+}
+#signupForm b{
+    color: white;
+    font-size: 70px;
+    margin-bottom: 70px;
+}
+#signupForm input{
+    padding: 5px;
+    color: #ffffff;
+    font-size: 22px;
+    outline: none;
+    background-color: #00000000;
+    border: none;
+    border-bottom: 3px solid #ffffff;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+#signupForm label{
+    color: #ffffff7f;
+    margin-bottom: 20px;
+}
+#signupForm span label::before{
+    transition: 0.5s;
+    content: '√';
+    color: #ffffff5f;
+    padding: 0 5px;
+    background-color: #40b74c;
+    position: relative;
+    top: 0;
+    left: 0px;
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#signupForm span input[type="checkbox"]{
+    opacity: 0;
+}
+#signupForm span input[type="checkbox"]:checked + label::before{
+    transition: 0.5s;
+    content: '√';
+    background-color: #3bff4f;
+    color: #000000;
+    padding: 0 5px;
+    position: relative;
+    top: 0;
+    left: 0px;
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+}
+::placeholder{
+    color: #ffffffbf;
+}
+#signupForm span label{
+    color: #ffffff;
+    position: relative;
+    left: -15px;
+}
+#signupForm input[type="submit"]{
+    background-color: #3bff4f;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    color: #048611;
+}
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon img{
+    width: 10vw;
+    height: 10vw;
+}
+.icon p{
+    font-size: 3vw;
+    color: #d8d805;
+}
+.container{
+    display: flex;
+    justify-content: baseline;
+    align-items: last baseline;
+    gap: 10vw;
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .container{
+        flex-direction: column;
+    }
+    body{
+        align-items: center;
+    }
+    .icon img{
+        width: 20vw;
+        height: 20vw;
+    }
+    .icon p{
+        font-size: 5vw;
+        color: #d8d805;
+    }
+    #signupForm{
+        width: 80vw;
+    }
+    #signupForm span label{
+        font-size: 13px;
+    }
+    #signupForm input{
+        font-size: 16px;
+    }
+}
